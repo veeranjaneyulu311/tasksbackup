@@ -1,0 +1,76 @@
+	merging:
+========
+git clone "..............."
+git branch
+git checkout <source>
+git pull origin <source>
+git checkout <desi>
+git pull origin qa
+git merge dev
+git status
+git add -i
+git status
+git commit -m "..........."
+git push origin qa
+tag:[Branch_version.task.bug_MONDD]
+===
+git tag -a Prod_1.2.11_OCT17 -m "merged qa to master"
+
+    
+git push origin Prod_1.2.11_OCT17
+
+git tag -d beta
+git push origin --delete beta
+
+
+create admin new user using git bash in centos mechine:
+=================================================
+1.create ec2 instance
+2.save filename.pem file in your pc
+3.go to file location-->right click-->click on "git bash here"
+4.ssh -i "db-testing.pem" centos@ec2-13-232-115-66.ap-south-1.compute.amazonaws.com  [change root to centos user]
+5.sudo -s [change to root user]
+6.enable port-22 and PasswordAuthentication - yes 
+  *vi /etc/ssh/sshd_config 
+  *service sshd restart/systemctl restart sshd
+7.adduser username
+8.passwd username[enter and confirm password]
+9.usermod -aG wheel username[members of the wheel group have sudo privileges]
+10.su - username[Test sudo access on new user account]
+11.sudo ls -la /root[only accessible to the root user.]
+
+dbuser   {Dru@999}
+
+linux:
+=====
+copy:
+----
+scp -P 22 -r ./deploy veer.n@13.233.123.16:/home/veer.n/--->COPIES "DEPLOY" FOLDER TO REMOTE SYSTEM'S VEER.N FOLDER
+
+rm -r filename[remove files(without -r)/remove non empty directory]
+rmdir foldername[remove empty directories]
+mv oldname newname[renaming]
+
+
+sudo visudo
+username ALL = NOPASSWD: /usr/bin/mv, /usr/sbin/service, /usr/bin/kill
+
+
+login :
+-----
+ssh -p portno user@IP/dns
+ssh -p 15951 drucareqa@10.0.2.103 'python test.py veer'
+sshpass -p 'pwd'  ssh -p 15951 drucareqa@10.0.2.103 'python test.py veer'
+hostnamectl set-hostname your-new-hostname
+
+scp  file1 veer.n@13.233.123.16:/home/veer.n/--------------------------copies file
+
+----------awk----------
+awk 'searchingpart/ {action}' sourcefile
+
+
+
+
+dev ui dist deploy directory:
+-----------------------------
+for dev:::::/var/lib/tomcat/webapps/app[1.6],ROOT[website],new[6]

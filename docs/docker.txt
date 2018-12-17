@@ -1,0 +1,47 @@
+Docker:  [https://docker-curriculum.com/#terminology]
+=======
+$ sudo docker pull busybox(image-name)
+$ sudo docker images 
+
+run:
+---
+$ sudo docker run busybox(image-name)
+$ docker run busybox echo "hello from busybox"  [executes single command]
+$ docker run -it busybox sh    [run more than just one command in a container][it=interactive tty]
+
+
+
+status:
+------
+$ sudo docker ps  [shows you all containers that are currently running]
+$ docker ps -a    [shows list of all containers that we ran]
+
+remove:
+-------
+$ docker rm containerId-1 containerId-2 ...
+$ docker rm $(docker ps -a -q -f status=exited)
+	-q ==returns the numeric IDs 
+	-f ==filters output based on conditions provided.
+note:--rm flag that can be passed to "docker run" which automatically deletes the container once it's exited.[ex:$ docker run --rm prakhar1989/static-site]
+$ docker container prune [ WARNING! This will remove all stopped containers]
+$ docker rmi imageId[delete images]
+
+running a service in docker:
+===========================
+$ docker run --rm prakhar1989/static-site
+note:{in this case, the client is not exposing any ports so we need to re-run the docker run command to publish ports}
+$ docker run -d -P --name static-site prakhar1989/static-site
+note:{
+		-d will detach our terminal[detached mode]
+		-P will publish all exposed ports to random ports
+		--name corresponds to a name we want to give to container
+		}
+$ docker port container-name/id  [to know the published ports]
+80/tcp -> 0.0.0.0:32769
+443/tcp -> 0.0.0.0:32768
+
+$ docker run -p 8888:80 image-name
+
+stop:
+----
+$ docker stop containerId/name

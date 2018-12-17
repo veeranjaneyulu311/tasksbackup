@@ -1,0 +1,42 @@
+memory:
+=======
+df -h  ------------------------[sytem space]
+du -h  ------------------------[free space]
+du -h /opt/app/jarbackup-------[size of any directory]
+free -h
+
+
+
+logs:
+====
+tail -222f /logs/report.json------[logs of services]
+
+
+
+copy:
+----
+scp -P 22 -r ./deploy veer.n@13.233.123.16:/home/veer.n/--->COPIES "DEPLOY" FOLDER TO REMOTE SYSTEM'S VEER.N FOLDER
+
+rm -r filename[remove files(without -r)/remove non empty directory]
+rmdir foldername[remove empty directories]
+mv oldname newname[renaming]
+
+security for drucareqa in 1a,1b,1c for script:
+----------------------------------------------
+sudo visudo
+username ALL = NOPASSWD: /usr/bin/mv, /usr/sbin/service, /usr/bin/kill
+
+
+login :
+-------
+ssh -p portno user@IP/dns
+ssh -p 15951 drucareqa@10.0.2.103 'python test.py veer'
+sshpass -p 'pwd'  ssh -p 15951 drucareqa@10.0.2.103 'python test.py veer'
+
+hostnamectl set-hostname your-new-hostname
+
+scp  file1 veer.n@13.233.123.16:/home/veer.n/--------------------------copies file
+
+----------awk----------
+awk 'searchingpart/ {action}' sourcefile
+

@@ -1,0 +1,3 @@
+ctrl+shift +o--auto import
+ctrl+shift +f--align
+ctrl +d ---delete select lines

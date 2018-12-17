@@ -1,0 +1,14 @@
+https://www.tecmint.com/security-and-hardening-centos-7-guide/
+https://www.tecmint.com/centos-7-hardening-and-security-guide/
+
+BIOS/UEFI password ,GRUB password
+13. Remove Unnecessary Software Packages
+rpm -qa   --------------------------------------------Verify installed packages
+yum list installed >> installed.txt-------------------Verify installed packages
+yum remove package_name-------------------------------delete a package
+
+
+15. Remove Unneeded Services
+# ss -tulpn
+# systemctl list-units -t service
+# yum remove service-name

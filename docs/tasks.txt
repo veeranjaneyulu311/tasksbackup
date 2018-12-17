@@ -1,0 +1,18 @@
+create ami 1a,1b,1c
+select 1b---actions--image--create image
+no reboot cheked
+delete on termination-unchecked
+qa-1b server in N.Virginia
+ami-nv-qa-app-1b
+m5.large
+
+
+
+
+
+
+
+two factor authenticat
+sudo usre two factor authentication
+remove other from sudo group & only permission to /opt/app folder
+

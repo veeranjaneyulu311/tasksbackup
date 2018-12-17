@@ -1,0 +1,7 @@
+12/12/18
+https://www.rootusers.com/how-to-open-a-port-in-centos-7-with-firewalld/
+https://verdaccio.org/
+Part 1 - https://www.tecmint.com/security-and-hardening-centos-7-guide/
+Part 2 - https://www.tecmint.com/centos-7-hardening-and-security-guide/
+13/12/18
+https://aws.amazon.com/blogs/compute/deploying-java-microservices-on-amazon-ec2-container-service/
